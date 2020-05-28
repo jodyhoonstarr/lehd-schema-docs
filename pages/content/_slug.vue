@@ -2,13 +2,21 @@
   <div class="container">
     <H1 class="surround">Content from the slug</H1>
     <nuxt-content :document="page"/>
+    <Test :items="items"></Test>
   </div>
 </template>
 
 <script>
+  import Test from "@/components/Test";
+
   export default {
-    components: {},
-    async asyncData({$content, params, error}) {
+    data(){
+      return {
+        items: ['Foo', 'Bar', 'Fizz', 'Buzz']
+      }
+    },
+    components: {Test},
+    asyncData({$content, params, error}) {
       return $content(params.slug).fetch()
         .then((page) => {
           return {page}
@@ -25,7 +33,7 @@
 <style>
   .container {
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
