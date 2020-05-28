@@ -90,6 +90,7 @@
 
 <script>
 export default {
+  name: "Default Layout",
   data () {
     return {
       clipped: false,
