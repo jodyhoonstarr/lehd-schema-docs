@@ -2,20 +2,12 @@
   <div class="container">
     <H1 class="surround">Content from the slug</H1>
     <nuxt-content :document="page" />
-    <Test :items="items"></Test>
   </div>
 </template>
 
 <script>
-import Test from "@/components/Test";
-
 export default {
-  data() {
-    return {
-      items: ["Foo", "Bar", "Fizz", "Buzz"],
-    };
-  },
-  components: { Test },
+  components: {},
   asyncData({ $content, params, error }) {
     return $content(params.slug)
       .fetch()
