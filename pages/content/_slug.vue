@@ -1,7 +1,12 @@
 <template>
   <div class="container">
-    <H1 class="surround">Content from the slug</H1>
     <nuxt-content :document="page" />
+    <br>
+    <hr>
+    <br>
+    <v-btn color="primary" nuxt to="/">
+      Home
+    </v-btn>
   </div>
 </template>
 
@@ -29,10 +34,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.surround {
-  padding: 12px;
+  text-align: left;
 }
 </style>
