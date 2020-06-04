@@ -17,7 +17,7 @@ import DataTable from "@/components/DataTable";
 export default {
   components: { DataTable },
   asyncData({ $content, params, error }) {
-    return $content(params.slug)
+    return $content(params.slug || "index")
       .fetch()
       .then((page) => {
         return { page };
