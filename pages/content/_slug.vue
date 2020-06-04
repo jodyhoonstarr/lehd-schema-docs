@@ -1,20 +1,21 @@
 <template>
-    <v-container class="fill-height" fluid>
-      <v-row align="center" justify="center">
-        <v-col cols="12">
-          <nuxt-content :document="page" />
-          <br />
-          <v-btn color="primary" nuxt to="/">
-            Home
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-container>
+  <v-container class="fill-height" fluid>
+    <v-row align="center" justify="center">
+      <v-col cols="12">
+        <nuxt-content :document="page" />
+        <br />
+        <v-btn color="primary" nuxt to="/">
+          Home
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+import DataTable from "@/components/DataTable";
 export default {
-  components: {},
+  components: { DataTable },
   asyncData({ $content, params, error }) {
     return $content(params.slug)
       .fetch()
@@ -38,7 +39,7 @@ export default {
 .nuxt-content-highlight pre {
   background: none !important;
 }
-.nuxt-content-highlight code::before{
+.nuxt-content-highlight code::before {
   content: "";
 }
 </style>

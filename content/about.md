@@ -1,6 +1,7 @@
 # About this content
 
 - hey
+- MATTWASHERE
 - look
 - this is written in markdown  
 
@@ -24,4 +25,6 @@ http.createServer((req, res) => {
 ## Text block heading
 We author plain documentation in a text format.
 
+## This is a test component
+<data-table></data-table>
 
